@@ -1,13 +1,11 @@
 import { defineComponent, createApp } from 'vue'
 
-
-
 const App = defineComponent({
   name: 'App',
 
   setup() {
     const DATE = new Date().toLocaleDateString(navigator.language, { dateStyle: 'long' })
-    
+
     return {
       DATE,
     }
@@ -17,7 +15,5 @@ const App = defineComponent({
 })
 
 const app = createApp(App)
-
 const vm = app.mount('#app')
-
 window.vm = vm

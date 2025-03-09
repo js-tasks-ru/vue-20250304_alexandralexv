@@ -1,4 +1,4 @@
-import { sum } from './sum.js'
+import { sum } from './sum.ts'
 
 const a = document.querySelector('input[name="num-a"]')
 const b = document.querySelector('input[name="num-b"]')

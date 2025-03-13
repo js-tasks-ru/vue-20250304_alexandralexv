@@ -4,6 +4,7 @@
   "files": [],
   "compilerOptions": {
     "outDir": "dist",
+    "verbatimModuleSyntax": true,
     "paths": {
       "@/*": ["./*"]
     }

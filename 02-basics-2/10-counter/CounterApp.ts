@@ -1,10 +1,10 @@
-import { defineComponent, ref, type Ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   name: 'CounterApp',
 
   setup() {
-    const num: Ref<number> = ref(0)
+    const num = ref<number>(0)
 
     return {
       num,

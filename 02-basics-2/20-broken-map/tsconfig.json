@@ -4,6 +4,11 @@
   "files": [],
   "compilerOptions": {
     "outDir": "dist",
+    "lib": ["dom", "esnext"],
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
     "paths": {
       "@/*": ["./*"]
     }

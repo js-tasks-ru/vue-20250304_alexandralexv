@@ -13,12 +13,17 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+
+    index: {
+      type: Number,
+      required: true,
+    },
   },
 
   template: `
     <li :class="{ marked }">
       {{ email }}
-      <button type="button" aria-label="Удалить" @click.stop>❌</button>
+      <button type="button" aria-label="Удалить" @click="$emit('delete')">❌</button>
     </li>
   `,
 })

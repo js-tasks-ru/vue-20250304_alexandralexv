@@ -3,7 +3,7 @@ import { UiAlert, UiContainer } from '@shgk/vue-course-ui'
 import MeetupAgenda from './MeetupAgenda.js'
 import MeetupDescription from './MeetupDescription.js'
 import MeetupCover from './MeetupCover.js'
-import MeetupInfo from './MeetupInfo.js'
+import MeetupInfo from './MeetupInfo.js/index.js'
 import './MeetupView.css'
 
 export default defineComponent({

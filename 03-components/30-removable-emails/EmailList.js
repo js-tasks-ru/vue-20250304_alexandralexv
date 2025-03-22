@@ -15,6 +15,8 @@ export default defineComponent({
     },
   },
 
+  emits: ['delete'],
+
   template: `
     <ul class="emails-list unstyled-list" aria-label="Emails">
       <EmailListItem

@@ -1,6 +1,6 @@
 import { defineComponent, ref } from 'vue'
 import { UiButton } from '@shgk/vue-course-ui'
-import UiCounter from './UiCounter.js'
+import UiCounter from './UiCounter.ts'
 
 export default defineComponent({
   name: 'App',

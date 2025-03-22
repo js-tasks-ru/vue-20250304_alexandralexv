@@ -13,11 +13,6 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-
-    index: {
-      type: Number,
-      required: true,
-    },
   },
 
   template: `

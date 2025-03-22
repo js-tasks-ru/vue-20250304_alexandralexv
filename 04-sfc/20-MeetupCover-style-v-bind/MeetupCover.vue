@@ -12,13 +12,12 @@ const props = defineProps({
 })
 
 const backgroundImage = computed(() => {
-  const image = props.image ? `url('${props.image}')` : 'var(--default-cover)'
-  return `linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), ${image}`
+  return props.image ? `url('${props.image}')` : 'var(--default-cover)'
 })
 </script>
 
 <template>
-  <div class="meetup-cover" :style="{ backgroundImage }">
+  <div class="meetup-cover">
     <h1 class="meetup-cover__title">{{ title }}</h1>
   </div>
 </template>
@@ -27,7 +26,7 @@ const backgroundImage = computed(() => {
 .meetup-cover {
   background-size: cover;
   background-position: center;
-  background-image: v-bind(backgroundImage);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), v-bind(backgroundImage);
   display: flex;
   flex-direction: column;
   align-items: center;

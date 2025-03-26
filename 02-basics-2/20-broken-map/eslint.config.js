@@ -3,7 +3,7 @@
 
 export default [
   {
-    files: ['./MapApp.js'],
+    files: ['./MapApp.ts'],
     rules: {
       'vue/no-ref-as-operand': 'off',
     },

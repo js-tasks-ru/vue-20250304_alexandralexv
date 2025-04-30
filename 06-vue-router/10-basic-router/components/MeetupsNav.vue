@@ -2,13 +2,13 @@
 
 <template>
   <nav class="nav">
-    <RouterLink :to="{name: 'index'}" class="nav__link">Главная</RouterLink>
-    <RouterLink :to="{name: 'foo'}" class="nav__link">Страница Foo</RouterLink>
-    <RouterLink :to="{name: 'bar'}" class="nav__link">Страница Bar</RouterLink>
-    <RouterLink :to="{name: 'login'}" class="nav__link">Вход</RouterLink>
-    <RouterLink :to="{name: 'login', query: {from: 'foo'}}" class="nav__link">Вход /login?from=/foo</RouterLink>
-    <RouterLink :to="{name: 'login', query: {from: 'bar'}}" class="nav__link">Вход /login?from=/bar</RouterLink>
-    <RouterLink :to="{name: 'register'}" class="nav__link">Регистрация</RouterLink>
+    <RouterLink to="index" class="nav__link">Главная</RouterLink>
+    <RouterLink to="foo" class="nav__link">Страница Foo</RouterLink>
+    <RouterLink to="bar" class="nav__link">Страница Bar</RouterLink>
+    <RouterLink to="login" class="nav__link">Вход</RouterLink>
+    <RouterLink :to="{name: 'login', query:{from: 'foo'}}" class="nav__link">Вход /login?from=/foo</RouterLink>
+    <RouterLink :to="{name: 'login', query:{from: 'bar'}}" class="nav__link">Вход /login?from=/bar</RouterLink>
+    <RouterLink to="register" class="nav__link">Регистрация</RouterLink>
   </nav>
 </template>
 

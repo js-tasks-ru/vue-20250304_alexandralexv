@@ -6,13 +6,14 @@ import LayoutAuth from '../components/LayoutAuth.vue'
 import { register } from '../api.ts'
 import { useRouter } from 'vue-router'
 
-const router = useRouter()
-
-const email = ref('dfemo@email')
+const email = ref('demo@email')
 const fullname = ref('Demo Organizer')
 const password = ref('password')
 const password2 = ref('password')
 const agree = ref(true)
+
+const router = useRouter();
+
 
 async function onSubmit() {
   try {
@@ -21,7 +22,7 @@ async function onSubmit() {
       fullname: fullname.value,
       password: password.value,
     })
-    router.push({name: 'login'})
+    router.push('login')
   } catch (error) {
     alert((error as Error).message)
   }
@@ -55,7 +56,7 @@ async function onSubmit() {
 
       <template #append>
         Уже есть аккаунт?
-        <RouterLink :to="{name: 'login'}">Войдите</RouterLink>
+        <RouterLink to="login">Войдите</RouterLink>
       </template>
     </MeetupsAuthForm>
   </LayoutAuth>

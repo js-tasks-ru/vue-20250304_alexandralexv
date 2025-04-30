@@ -1,31 +1,31 @@
 <script setup lang="ts">
-const props = defineProps({
-  forwardLink: {
-    type: String,
-    required: false,
-  }
-})
-
 import { UiButton, UiFormGroup, UiInput } from '@shgk/vue-course-ui'
 import { ref } from 'vue'
 import MeetupsAuthForm from '../components/MeetupsAuthForm.vue'
 import LayoutAuth from '../components/LayoutAuth.vue'
 import { login } from '../api.ts'
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 const email = ref('demo@email')
 const password = ref('password')
-const router = useRouter()
+
+const route = useRoute();
+const router = useRouter();
+
 
 async function onSubmit() {
   try {
     await login(email.value, password.value)
-    if (props.forwardLink) {
-      router.push(props.forwardLink)
-    } else {
-      router.push({name: 'index'})
+
+    const query = route.query;
+
+    if(query.from === undefined){
+      router.push('/');
     }
-    // Авторизация прошла успешно
+    else{
+      router.push(query.from?.toString());
+    }
+
   } catch (error) {
     alert((error as Error).message)
   }
@@ -49,7 +49,7 @@ async function onSubmit() {
 
       <template #append>
         Нет аккаунта?
-        <RouterLink :to="{name: 'register'}">Зарегистрируйтесь</RouterLink>
+        <RouterLink to="register">Зарегистрируйтесь</RouterLink>
       </template>
     </MeetupsAuthForm>
   </LayoutAuth>

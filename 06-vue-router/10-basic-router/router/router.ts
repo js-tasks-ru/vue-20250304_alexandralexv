@@ -27,9 +27,9 @@ export const router = createRouter({
       path: '/login',
       name: 'login',
       component: PageLogin,
-      props: to => ({
-        forwardLink: to.query.from,
-      }),
+      meta: {
+        from: '',
+      },
     },
     {
       path: '/register',
